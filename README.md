@@ -8,9 +8,9 @@ pip install -r requirements.txt
 
 ## Usage
 
-To run the script every 5 seconds for 1 minute and write data with the timestamp and block height.
+Execute the command below to return the first 20 validator addresses.
 
-`python run_app_every_5_seconds_for_1_minute.py`
+`curl -X POST http://127.0.0.1:26657 -d "{\"jsonrpc\":\"2.0\",\"id\":1,\"method\":\"validators\",\"params\":{\"height\":\"1\", \"page\":\"1\", \"per_page\":\"20\"}}" > genesis_validators.json`
 
 To check the csv file, open the fx-bridge token supply.csv
 
